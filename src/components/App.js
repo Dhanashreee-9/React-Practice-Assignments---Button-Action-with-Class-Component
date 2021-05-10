@@ -14,11 +14,11 @@ class App extends Component {
 	}		
 	render(){
         return(
-    // changePara() ? <p>"Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy"</p> : "" ;
+    
 	<div>
     	<button id ="click" onClick={this.changePara}>Click Me!!</button>
-       <p id="para">{this.state.para}</p>
-  </div>
+      { this.changePara ? <p id="para">{this.state.para}</p> : ""}
+        </div>
 	)
 		
 };
