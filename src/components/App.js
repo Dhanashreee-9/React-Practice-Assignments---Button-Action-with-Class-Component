@@ -1,25 +1,28 @@
-import React, {Component, useState} from "react";
+
+import {Component} from "react";
 import "./../styles/App.css";
 
 class App extends Component {
+	constructor(){
+	super();
+		this.state={
+	        para: "",
+		}
+	}
+	 changePara=()=>{
+		this.setState({ para :"Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy"})
+	}		
 	render(){
-	 const [showpara, showParagraph] = useState(false);
-
-    const onClicking = () => {
-        showParagraph(true);
-    };
-    return (
-        <div id="main">
-            {/* Do not remove this main div!! */}
-            <button id="click" onClick={() => onClicking()}>
-                {"Click me"}
-            </button>
-            {showpara ? <p id="para">Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p> : ""}
-        </div>
-    );}
-   
+        return(
+    // changePara() ? <p>"Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy"</p> : "" ;
+	<div>
+    	<button id ="click" onClick={this.changePara}>Click Me!!</button>
+       <p id="para">{this.state.para}</p>
+  </div>
+	)
+		
 };
-
+}
 
 export default App;
 
