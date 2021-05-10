@@ -5,11 +5,11 @@ class App extends Component {
 	constructor(){
 	super();
 		this.state={
-	        para: false, // initially ye false rahega to p tag show nhi hoga
+	        para: false, 
 		}
 	}
 	 changePara=()=>{
-		this.setState({ para :true}); // click krne ke baad para true set ho gaya so p this.state.para true hoga and p tag show krega
+		this.setState({ para :true});
 	}		
 	render(){
         return(
