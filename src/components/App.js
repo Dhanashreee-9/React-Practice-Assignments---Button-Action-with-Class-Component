@@ -10,7 +10,7 @@ class App extends Component {
 		}
 	}
 	 changePara=()=>{
-		this.setState({ para :Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy})
+		this.setState({ para :"Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy"})
 	}		
 	render(){
         return(
