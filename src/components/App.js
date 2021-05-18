@@ -1,25 +1,21 @@
 import React, {Component, useState} from "react";
-import "./../styles/App.css";
-
+import '../styles/App.css';
 class App extends Component {
-	constructor(){
-	super();
-		this.state={
-	        para: false, 
-		}
-	}
-	 changePara=()=>{
-		this.setState({ para :true});
-	}		
-	render(){
-        return(
-        <div>
-    	   <button id ="click" onClick={this.changePara}>Click Me!!</button>
-           { this.state.para ? <p id="para">Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p> : ""}
-        </div>
-	)
-};
+    constructor(props) {
+		super(props);
+	   this.state={
+	     isClicked:false
+	    }
+	};
+    render() {
+    	return(
+    		<div id="main">
+				{ /* Do not remove this main div!! */ }
+		{this.state.isClicked?<p id="para">Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p>:null}
+		<button id="click" onClick={()=>{this.setState({isClicked:true})}}>click</button>
+    		</div>
+    	);
+    }
 }
-
 export default App;
 
